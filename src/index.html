@@ -9,7 +9,7 @@
 <header class="header">
     <div class="container">
         <div class="header__row">
-            <div class="header-town">
+            <a class="header-town" href="#">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_929)">
                         <path d="M7 13.8414L3.28767 10.129C2.55345 9.39481 2.05344 8.45935 1.85087 7.44095C1.64831 6.42255 1.75228 5.36695 2.14964 4.40764C2.547 3.44834 3.21991 2.6284 4.08327 2.05153C4.94662 1.47465 5.96165 1.16675 7 1.16675C8.03835 1.16675 9.05338 1.47465 9.91674 2.05153C10.7801 2.6284 11.453 3.44834 11.8504 4.40764C12.2477 5.36695 12.3517 6.42255 12.1491 7.44095C11.9466 8.45935 11.4466 9.39481 10.7123 10.129L7 13.8414ZM9.8875 9.3042C10.4585 8.73312 10.8474 8.00554 11.0049 7.21346C11.1624 6.42138 11.0815 5.60038 10.7725 4.85428C10.4634 4.10817 9.94003 3.47046 9.26854 3.0218C8.59704 2.57314 7.80759 2.33366 7 2.33366C6.19241 2.33366 5.40296 2.57314 4.73147 3.0218C4.05998 3.47046 3.5366 4.10817 3.22753 4.85428C2.91846 5.60038 2.83758 6.42138 2.9951 7.21346C3.15262 8.00554 3.54148 8.73312 4.1125 9.3042L7 12.1917L9.8875 9.3042ZM7 7.58337C6.69058 7.58337 6.39384 7.46045 6.17504 7.24166C5.95625 7.02287 5.83334 6.72612 5.83334 6.4167C5.83334 6.10728 5.95625 5.81054 6.17504 5.59174C6.39384 5.37295 6.69058 5.25004 7 5.25004C7.30942 5.25004 7.60617 5.37295 7.82496 5.59174C8.04375 5.81054 8.16667 6.10728 8.16667 6.4167C8.16667 6.72612 8.04375 7.02287 7.82496 7.24166C7.60617 7.46045 7.30942 7.58337 7 7.58337Z" fill="black"/>
@@ -21,17 +21,24 @@
                     </defs>
                 </svg>
                 Нижний Новгород
-            </div>
+            </a>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li><a class="navigation__item" href="#">Как заказать</a></li>
-                    <li><a class="navigation__item" href="#">Доставка и оплата</a></li>
-                    <li><a class="navigation__item" href="#">Кредит и рассрочка</a></li>
-                    <li><a class="navigation__item" href="#">Сборка</a></li>
-                    <li><a class="navigation__item" href="#">Частые вопросы</a></li>
+                    <li class="navigation__item"><a class="navigation-link" href="#">Как заказать</a></li>
+                    <li class="navigation__item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
+                    <li class="navigation__item"><a class="navigation-link" href="#">Кредит и рассрочка</a></li>
+                    <li class="navigation__item"><a class="navigation-link" href="#">Сборка</a></li>
+                    <li class="navigation__item">
+                        <a class="navigation-link navigation-link--sub" href="#">Частые вопросы</a>
+                        <ul class="navigation__sublist">
+                            <li class="navigation__item"><a class="navigation-link" href="#">О нас</a></li>
+                            <li class="navigation__item"><a class="navigation-link" href="#">Отзывы</a></li>
+                            <li class="navigation__item"><a class="navigation-link" href="#">Гарантии</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <a class="header-tel" href="tel:+73472926252">+7 (347) 292-62-52</a>
+            <a class="phone" href="tel:+73472926252">+7 (347) 292-62-52</a>
         </div>
         <hr class="header__line"/>
         <div class="header__row">
@@ -87,7 +94,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a class="adress" href="#">
+                <a class="adress adress--disabled" href="#">
                     Адреса
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_961)">
@@ -120,10 +127,11 @@
                         </g>
                         <defs>
                             <clipPath id="clip0_1_934">
-                                <rect width="24" height="24" fill="white"/>
+                                <rect width="24" height="24" fill="whit-e"/>
                             </clipPath>
                         </defs>
                     </svg>
+                    <div class="cart__count">1</div>
                 </a>
             </div>
         </div>
@@ -131,49 +139,104 @@
 </header>
 <main>
     <section class="banner">
-        <div class="container background-holder">
-            <div>
-                Главная / Все коллекции / Альба / Спальня
+        <div class="container">
+            <div class="banner__background">
+                <img loading="lazy" src="./images/background-image.jpg" alt="Фоновое изображение спальни"/>
             </div>
-            <h1>
+            <div class="bread-crumbs">
+                Главная <span class="bread-crumbs__separator">/</span> Все коллекции <span class="bread-crumbs__separator">/</span> Альба <span class="bread-crumbs__separator">/</span> <span class="bread-crumbs__current">Спальня</span>
+            </div>
+            <h2 class="title">
                 Спальня
-            </h1>
-            <div>
+            </h2>
+            <div class="banner__description">
                 Спальня коллекции Альба
             </div>
         </div>
     </section>
     <section class="fotos">
         <div class="container">
-            <h2>
+            <h2 class="title">
                 Фотографии и видео
             </h2>
-            <div>
-                слайдер
+            <div class="galery">
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
+                <div class="galery__item">
+                    <img src="./images/holder-foto.jpg" alt="Спальня"/>
+                </div>
             </div>
-            <p>
-                Представляем вашему вниманию спальный гарнитур «Натали» Он выполнен в классическом стиле  с элементами аристократии и роскоши. В комплект входят: кровать, прикроватные тумбы, несколько вариантов шкафов и комод с зеркалом. Обратите внимание, все модули комплекта вы можете приобрести по отдельности. Коллекция «Натали» может быть выполнена в двух цветах: в темном оттенке «Орех», а также в более светлом решении «Клен Ясень Бежевый» Рекомендуем Вам обязательно посмотреть видео спальни, гостиной  и прихожей из коллекции «Натали».
+            <p class="fotos__text">
+                Представляем вашему вниманию спальный гарнитур «Натали». Он выполнен в&nbsp;классическом стиле с&nbsp;элементами аристократии и&nbsp;роскоши. В комплект входят:&nbsp;кровать, прикроватные тумбы, несколько вариантов шкафов и&nbsp;комод с&nbsp;зеркалом. Обратите внимание, все модули комплекта вы можете приобрести по&nbsp;отдельности. Коллекция «Натали» может быть выполнена в&nbsp;двух цветах: в&nbsp;темном оттенке «Орех», а&nbsp;также в&nbsp;более светлом решении «Клен Ясень Бежевый». Рекомендуем Вам обязательно посмотреть видео спальни, гостиной и&nbsp;прихожей из&nbsp;коллекции «Натали».
             </p>
         </div>
     </section>
     <section class="compilation">
         <div class="container">
-            <h2>
+            <h2 class="title">
                 Подборка один
             </h2>
             <div>
-                <div>Список</div>
-                <div>Слайдер</div>
+                <div>
+                    <ul>
+                        <li>Кровать «Триумф» 160 8 000 ₽</li>
+                        <li>Матрас средний 10 000 ₽ </li>
+                        <li>Тумба прикроватная 2 000 ₽ </li>
+                        <li>Шкаф 4-дверный 10 000 ₽ </li>
+                        <li>Комод 2 000 ₽ </li>
+                        <li>Зеркало 2 000 ₽ </li>
+                        <li>Пуф 2 000 ₽ </li>
+                        <li>Итого 2 000 ₽ </li>
+                    </ul>
+                    <button>Добавить товары в корзину</button>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <img src="./images/product-image.jpg" alt="Продукт"/>
+                        </div>
+                        <div>Звезды</div>
+                        <p>Кровать «Триумф»</p>
+                        <p>8 000 ₽ </p>
+                        <button>В корзину</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section class="recommendations">
         <div class="container">
-            <h2>
+            <h2 class="title">
                 Для спальни
             </h2>
             <div>
-                Слайдер
+                <div>
+                    <div>
+                        <div>-10%</div>
+                        <img src="./images/product-image.jpg" alt="Продукт"/>
+                    </div>
+                    <div>Звезды</div>
+                    <p>Кровать «Триумф»</p>
+                    <p>18 000 ₽</p>
+                    <p>8 000 ₽ </p>
+                    <button>В корзину</button>
+                </div>
             </div>
         </div>
     </section>
@@ -181,18 +244,41 @@
 <footer class="footer">
     <div class="container">
         <div>
-            <p class="footer__slogan">Сайт рыбатекст поможет дизайнеру, верстальщику</p>
+            <p class="footer__slogan">Сайт рыбатекст поможет<br/>дизайнеру,&nbsp;верстальщику</p>
             <p class="footer__write">Оставьте заявку и мы пришлем вам ссылку</p>
         </div>
-        <div>
-            Форма
-        </div>
+        <form>
+            <label>
+                <input placeholder="Ваше имя"/>
+            </label>
+            <label>
+                <input placeholder="Ваш телефон"/>
+            </label>
+            <label>
+                <input placeholder="Ваша почта"/>
+            </label>
+            <button type="submit">Подписаться</button>
+        </form>
         <div class="footer__content">
-            <nav class="navigation">
-                Меню
+            <nav class="navigation navigation--footer navigation--black">
+                <ul class="navigation__list">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Как сделать заказ</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Сборка</a></li>
+                    <li><a href="#">Адреса магазинов</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
             </nav>
             <div>
-                Контакты
+                <a href="#">Инстаграмм</a>
+                <a href="#">Фейсбук</a>
+                <a href="#">Вконтакте</a>
+                <a class="phone" href="tel:+73472926252">+7 (347) 292-62-52</a>
+                <a href="mailto:info@mebelhol.ru">info@mebelhol.ru</a>
             </div>
         </div>
         <div>
