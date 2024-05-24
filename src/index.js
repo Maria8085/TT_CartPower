@@ -72,3 +72,9 @@ burger.addEventListener('change',(event)=>{
     }
 })
 
+const userphone = document.querySelectorAll("[name='userphone']");
+    userphone.forEach((e)=>{
+		const maskTel = IMask(e, {
+	        mask: '+{7}(000)000-00-00'
+	    });
+	});
