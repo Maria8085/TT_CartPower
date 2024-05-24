@@ -129,8 +129,7 @@ a:hover{
         }
     }
     .side-menu {
-         display: none;
-
+        visibility: hidden;
         &:checked {
             & ~ header-menu-list{
                 display: block;
