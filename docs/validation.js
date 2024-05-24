@@ -153,6 +153,6 @@ form.addEventListener('submit', (event) => {
 
     // Display the data in an alert
     alert(message);
-    // form.submit();
+    form.submit();
   }
 });
